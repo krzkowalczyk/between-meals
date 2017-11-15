@@ -74,8 +74,8 @@ module BetweenMeals
         end
       end
 
-      def checkout(url)
-        @cmd.clone(url, @repo_path)
+      def checkout(url, branch)
+        @cmd.clone(url, @repo_path, branch)
         @repo = Rugged::Repository.new(File.expand_path(@repo_path))
       end
 

@@ -24,8 +24,8 @@ module BetweenMeals
           cmd("config #{key}")
         end
 
-        def clone(url, repo_path)
-          cmd("clone #{url} #{repo_path}", '/tmp')
+        def clone(url, repo_path, branch)
+          cmd("clone -b #{branch} #{url} #{repo_path}", '/tmp')
         end
 
         def diff(start_ref, end_ref)
